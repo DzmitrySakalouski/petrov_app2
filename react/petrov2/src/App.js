@@ -1,9 +1,40 @@
 import React from 'react';
 import './sass/main.scss';
-import images from './assets';
-import { PopupForm, Calendar } from './components';
+
+import about_img_1 from './assets/img/about_img_1.jpg';
+import about_img_2 from './assets/img/about_img_2.jpg';
+import about_img_3 from './assets/img/about_img_3.jpg';
+
+import img1 from './assets/img/img1.jpg';
+import img2 from './assets/img/img2.jpg';
+import img3 from './assets/img/img3.jpg';
+import img4 from './assets/img/img4.jpg';
+import img5 from './assets/img/img5.jpg';
+import img6 from './assets/img/img6.jpg';
+import img7 from './assets/img/img7.jpg';
+import img8 from './assets/img/img8.jpg';
+import img9 from './assets/img/img9.jpg';
+import img10 from './assets/img/img10.jpg';
+
+import {
+    PopupForm,
+    Calendar,
+    SlideShow
+} from './components';
 
 function App() {
+    const slideImages = [
+        img1,
+        img2,
+        img3,
+        img4,
+        img5,
+        img6,
+        img7,
+        img8,
+        img9,
+        img10,
+    ];
   return (
     <body>
     <div className="navigation">
@@ -83,9 +114,9 @@ function App() {
                 </div>
                 <div className="col-1-of-2">
                     <div className="composition">
-                        <img src={images.img1} alt="about_photo_1" className="composition__photo composition__photo--p1"/>
-                        <img src={images.img2} alt="about_photo_2" className="composition__photo composition__photo--p2"/>
-                        <img src={images.img3} alt="about_photo_3" className="composition__photo composition__photo--p3"/>
+                        <img src={about_img_1} alt="about_photo_1" className="composition__photo composition__photo--p1"/>
+                        <img src={about_img_2} alt="about_photo_2" className="composition__photo composition__photo--p2"/>
+                        <img src={about_img_3} alt="about_photo_3" className="composition__photo composition__photo--p3"/>
                     </div>
                 </div>
             </div>
@@ -304,6 +335,18 @@ function App() {
             <div className="u-senter-text u-margin-bottom-5">
                 <h2 className="heading-secondary">Расписание</h2>
                 <Calendar />
+            </div>
+        </section>
+
+        <section className="section-stories">
+            <div className="u-senter-text u-margin-bottom-5">
+                <h2 className="heading-secondary heading-secondary--white">Галерея</h2>
+            </div>
+            <div className="row">
+                <SlideShow slides={slideImages} />
+            </div>
+            <div className="u-senter-text u-margin-top-little">
+                <a href="#stories" className="btn btn--green">смотреть все</a>
             </div>
         </section>
     </main>
