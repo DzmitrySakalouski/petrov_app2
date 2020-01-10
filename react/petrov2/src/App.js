@@ -1,7 +1,7 @@
 import React from 'react';
 import './sass/main.scss';
 import images from './assets';
-import { PopupForm } from './components';
+import { PopupForm, Calendar } from './components';
 
 function App() {
   return (
@@ -292,7 +292,8 @@ function App() {
 
         <section className="section-calendar">
             <div className="u-senter-text u-margin-bottom-5">
-                <h2 className="heading-secondary">Мои услуги</h2>
+                <h2 className="heading-secondary">Расписание</h2>
+                <Calendar />
             </div>
         </section>
     </main>

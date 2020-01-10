@@ -1,0 +1,166 @@
+.calendar {
+    margin-top: 3rem;
+    .react-calendar-custom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .react-calendar__navigation {
+            height: 50px;
+            // display: flex;
+            // justify-content: space-between;
+            button.react-calendar__navigation__label {
+                width: 450px;
+                background-color: transparent;
+                border: none;
+                color: $colorBlack;
+                font-size: 25px;
+                flex-grow: 0 !important;
+            }
+    
+            button.react-calendar__navigation__arrow {
+                background-color: transparent;
+                border: none;
+                color: $colorBlack;
+                font-size: 35px;
+                padding: 0 15px;
+            }
+    
+            .react-calendar__navigation__prev2-button {
+                flex-basis: 0;
+            }
+        }
+    
+        .react-calendar__viewContainer {
+            width: 650px;
+    
+            .react-calendar__month-view__days > button.react-calendar__tile.react-calendar__month-view__days__day--neighboringMonth {
+                abbr {
+                    color: rgb(62, 69, 71);
+                }
+                
+            }
+    
+            .react-calendar__month-view__days > button.react-calendar__tile.react-calendar__month-view__days__day, button.react-calendar__tile.react-calendar__month-view__days__day--weekend {
+                height: 50px;
+                
+                background-color: transparent;
+                color: $colorDarkestGrey;
+                border: none;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                abbr {
+                    display: block;
+                    height: 100%;
+                    width: 100%
+                }
+            }
+    
+            button.selected {
+                background-color: #61DAFB !important;
+                color: #282c34 !important;
+            }
+    
+            .react-calendar__month-view__weekdays {
+                height: 40px;
+                color: $colorDarkestGrey;
+    
+                .react-calendar__month-view__weekdays__weekday {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                abbr {
+                    text-decoration: none !important;
+                }
+            }
+        }
+    
+        
+    }
+}
+
+.react-calendar-custom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .react-calendar__navigation {
+        height: 50px;
+        // display: flex;
+        // justify-content: space-between;
+        button.react-calendar__navigation__label {
+            width: 450px;
+            background-color: transparent;
+            border: none;
+            color: $colorBlack;
+            font-size: 25px;
+            flex-grow: 0 !important;
+        }
+
+        button.react-calendar__navigation__arrow {
+            background-color: transparent;
+            border: none;
+            color: $colorBlack;
+            font-size: 35px;
+            padding: 0 15px;
+        }
+
+        .react-calendar__navigation__prev2-button {
+            flex-basis: 0;
+        }
+    }
+
+    .react-calendar__viewContainer {
+        width: 650px;
+
+        .react-calendar__month-view__days > button.react-calendar__tile.react-calendar__month-view__days__day--neighboringMonth {
+            abbr {
+                color: rgb(62, 69, 71);
+            }
+            
+        }
+
+        .react-calendar__month-view__days > button.react-calendar__tile.react-calendar__month-view__days__day, button.react-calendar__tile.react-calendar__month-view__days__day--weekend {
+            height: 50px;
+            
+            background-color: transparent;
+            color: $colorDarkestGrey;
+            border: none;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            abbr {
+                display: block;
+                height: 100%;
+                width: 100%
+            }
+        }
+
+        button.selected {
+            background-color: #61DAFB !important;
+            color: #282c34 !important;
+        }
+
+        .react-calendar__month-view__weekdays {
+            height: 40px;
+            color: $colorDarkestGrey;
+
+            .react-calendar__month-view__weekdays__weekday {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            abbr {
+                text-decoration: none !important;
+            }
+        }
+    }
+
+    
+}
