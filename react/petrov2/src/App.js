@@ -23,10 +23,13 @@ function App() {
                     <a href="" className="navigation__link">Услуги</a>
                 </li>
                 <li className="navigation__item">
-                    <a href="" className="navigation__link">Галерея</a>
+                    <a href="" className="navigation__link">Отзывы</a>
                 </li>
                 <li className="navigation__item">
-                    <a href="" className="navigation__link">Отзывы</a>
+                    <a href="" className="navigation__link">Расписание</a>
+                </li>
+                <li className="navigation__item">
+                    <a href="" className="navigation__link">Галерея</a>
                 </li>
                 <li className="navigation__item">
                     <a href="" className="navigation__link">Контакты</a>
@@ -39,15 +42,22 @@ function App() {
         <div className="header__logo-box">
             <p className="header__logo">Petrov Showman</p>
         </div>
-
-        <div className="header__text-box">
-            <h1 className="heading-primary">
-                <span className="heading-primary--main">Александр Петров</span>
-                <span className="heading-primary--sub">Ведущийи</span>
-            </h1>
-
-            <a href="#" className="btn btn--white btn--animated">Забронировать дату</a>
-        </div>
+        <div className="row">
+            <div className="col-1-of-2 full-height">
+                <div className="header__bar">
+                    <h1 className="heading-primary">
+                        <span className="heading-primary--main">Александр Петров</span>
+                        <span className="heading-primary--sub">Ведущий</span>
+                    </h1>
+                    <a href="#" className="btn btn--white btn--animated">Забронировать дату</a>
+                </div>
+            </div>
+            <div className="col-1-of-2 full-height">
+                <div className="header__bar">
+                    <div className="header__avatar" />
+                </div>   
+            </div>
+        </div> 
     </header>
 
     <main>
