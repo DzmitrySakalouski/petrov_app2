@@ -4,7 +4,7 @@
     }
 
     &__checkbox:checked ~ &__background{
-        transform: scale(50);
+        transform: scale(70);
     }
 
     &__checkbox:checked ~ &__nav{
@@ -17,8 +17,8 @@
         width: 7rem;
         height: 7rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 7rem;
+        right: 7rem;
         border-radius: 50%;
         z-index: 6;
         box-shadow: 0 2rem 4rem rgba($colorBlack, 0.4);
@@ -30,8 +30,8 @@
         height: 6rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 7.5rem;
+        right: 7.5rem;
         background-image: radial-gradient($colorLightGreen, $colorDarkGreen);
         z-index: 4;
 

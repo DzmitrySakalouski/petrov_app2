@@ -56,15 +56,15 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); 
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $colorLightYellow, $colorDarkYellow), url(../assets/img/about_img_1.jpg);
+            background-image: linear-gradient(to right bottom, $colorLightYellow, $colorDarkYellow), url(../../assets/img/about_img_1.jpg);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $colorLightBlue, $colorDarkBlue), url(../assets/img/about_img_2.jpg);
+            background-image: linear-gradient(to right bottom, $colorLightBlue, $colorDarkBlue), url(../../assets/img/about_img_2.jpg);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $colorLightGreen, $colorDarkGreen), url(../assets/img/about_img_3.jpg);
+            background-image: linear-gradient(to right bottom, $colorLightGreen, $colorDarkGreen), url(../../assets/img/about_img_3.jpg);
         }
     }
 
