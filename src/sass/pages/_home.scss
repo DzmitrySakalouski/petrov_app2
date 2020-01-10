@@ -1,0 +1,67 @@
+.section-about {
+    background-color: $colorGreyLight-1;
+    padding: 20rem 0 23rem 0;
+    margin-top: -20vh;
+}
+
+.section-features {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,
+        rgba($colorLightGreen,0.8),
+        rgba($colorDarkGreen, 0.8)),
+        url(../assets/img/main.jpg);
+    background-size: cover;
+
+    transform: skewY(-3deg);
+    margin-top: -5rem;
+
+    &>* {
+        transform: skewY(3deg);
+    }
+}
+
+.section-amenities {
+    background-color: $colorGreyLight-1;
+    padding: 20rem 0 10rem 0;
+    margin-top: -10rem;
+}
+
+.section-stories {
+    padding: 10rem 0;
+    background-color: $colorGreyLight-2;
+    background-image: 
+        linear-gradient(to right bottom,
+        rgba($colorLightGreen,0.5),
+        rgba($colorDarkGreen, 0.5)),
+        url(../assets/img/stories_back.jpg);
+    background-size: cover;
+    background-position-x: 90%;
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: 
+        linear-gradient(to right bottom,
+        $colorLightGreen,
+        $colorDarkGreen);
+        
+}
+
+.book {
+    background-image: 
+        linear-gradient(105deg,
+        rgba($colorWhite, .8) 0%,
+        rgba($colorWhite, .8) 50%,
+        transparent 50%),
+        url(../assets/img/stories_back.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($colorBlack,0.2); 
+    height: 58rem;
+    background-position-x: 70%;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
