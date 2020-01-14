@@ -343,7 +343,8 @@ function App() {
                 <h2 className="heading-secondary heading-secondary--white">Галерея</h2>
             </div>
             <div className="row">
-                <SlideShow slides={slideImages} />
+                <SlideShow images={slideImages} />
+
             </div>
             <div className="u-senter-text u-margin-top-little">
                 <a href="#stories" className="btn btn--green">смотреть все</a>
