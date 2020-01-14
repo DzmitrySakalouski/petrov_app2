@@ -23,6 +23,8 @@ import {
 } from './components';
 
 function App() {
+    const [eventType, setEventType] = React.useState("none");
+
     const slideImages = [
         img1,
         img2,
@@ -80,7 +82,7 @@ function App() {
                         <span className="heading-primary--main">Александр Петров</span>
                         <span className="heading-primary--sub">Ведущий</span>
                     </h1>
-                    <a href="#" className="btn btn--white btn--animated">Забронировать дату</a>
+                    <a href="#popup" onClick={() => setEventType("none")} className="btn btn--white btn--animated">Забронировать дату</a>
                 </div>
             </div>
             <div className="col-1-of-2 full-height">
@@ -206,7 +208,7 @@ function App() {
                                     <p className="card__price-only">Всего</p>
                                     <p className="card__price-value">123BYN</p>
                                 </div>
-                                <a href="#popup" className="btn btn--white">Заказать сейчас</a>
+                                <a href="#popup" onClick={() => setEventType("corpotation")} className="btn btn--white">Заказать сейчас</a>
                             </div>
                         </div>
                     </div>
@@ -239,7 +241,7 @@ function App() {
                                     <p className="card__price-only">Всего</p>
                                     <p className="card__price-value">123BYN</p>
                                 </div>
-                                <a href="#popup" className="btn btn--white">Заказать сейчас</a>
+                                <a href="#popup" onClick={() => setEventType("banquet")} className="btn btn--white">Заказать сейчас</a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +274,7 @@ function App() {
                                     <p className="card__price-only">Всего</p>
                                     <p className="card__price-value">123BYN</p>
                                 </div>
-                                <a href="#popup" className="btn btn--white">Забронировать сейчас</a>
+                                <a href="#popup" onClick={() => setEventType("wedding")} className="btn btn--white">Забронировать сейчас</a>
                             </div>
                         </div>
                     </div>
@@ -344,7 +346,6 @@ function App() {
             </div>
             <div className="row">
                 <SlideShow images={slideImages} />
-
             </div>
             <div className="u-senter-text u-margin-top-little">
                 <a href="#stories" className="btn btn--green">смотреть все</a>
@@ -394,7 +395,7 @@ function App() {
         <a href="#section-amenities" className="popup__link">
             &times;
         </a>
-        <PopupForm />
+        <PopupForm preselectedType={eventType} />
     </div>
     <div className="popup" id="stories">
         <a href="#section-amenities" className="popup__link">

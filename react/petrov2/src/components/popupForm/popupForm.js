@@ -1,6 +1,58 @@
 import React from 'react';
+import { Dropdown } from '../dropdown';
+
+const items = {
+    none: {
+        value: "none",
+        label: 'Выберите тип',
+        selected: true
+    },
+    corporation: {
+        value: "corpotation",
+        label: 'Корпоратив',
+        selected: false
+    },
+    banquet: {
+        value: "banquet",
+        label: "Банкет",
+        selected: false
+    },
+    wedding: {
+        value: "wedding",
+        label: "Свадьба",
+        selected: false
+    }
+}
 
 export const PopupForm = props => {
+    const { preselectedType } = props;
+    const [dropItems, setDropItems] = React.useState(getSelectedType(items, preselectedType));
+
+    const onTypeChange = e => {
+        setDropItems(getSelectedType(dropItems, e.currentTarget.value));
+    }
+
+    function getSelectedType (typesObject, selectedValue) {
+        const typesArray = [];
+
+        for (let key in typesObject) {
+            
+            if (typesObject[key].value === selectedValue) {
+                typesObject[key].selected = true;
+            } else {
+                typesObject[key].selected = false;
+            }
+
+            typesArray.push(typesObject[key]);
+        }
+
+        return typesArray; 
+    }
+
+    const onSubmit = () => {
+        alert("Данные отправлены");
+    }
+    
     return (
         <React.Fragment>
         <div className="popup__content">
@@ -19,8 +71,13 @@ export const PopupForm = props => {
                             </div>
 
                             <div className="form__group">
-                                <input id="email" type="text" className="form__input" placeholder="ПОЧТА/СТРАНИЦА В ВК" required pattern=""/>
+                                <input id="email" type="text" className="form__input" placeholder="ПОЧТА/СТРАНИЦА В ВК" required/>
                                 <label for="email" className="form__label">ПОЧТА/СТРАНИЦА В ВК</label>
+                            </div>
+
+                            <div className="form__group">
+                                <Dropdown onTypeChange={onTypeChange} id="type" className="form__input" dropdownItems={dropItems} />
+                                <label for="type" className="form__label">ТИП МЕРОПРИЯТИЯ</label>
                             </div>
 
                             <div className="form__group">
@@ -35,7 +92,7 @@ export const PopupForm = props => {
                             </u-margin-bottom-1>
 
                             <div className="form__group u-margin-top-little">
-                                <button type="submit" className="btn btn--green">Зарегестрироваться</button>
+                                <button onClick={onSubmit} type="submit" className="btn btn--green">Зарегестрироваться</button>
                             </div>
                         </form>
                     </div>
